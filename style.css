@@ -1,0 +1,198 @@
+:root {
+    --vdg-blue: hsl(217, 19%, 35%);
+    --dd-blue: hsl(214, 17%, 51%);
+    --g-blue: hsl(212, 23%, 69%);
+    --lg-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+    --go-blue: hsla(212, 23%, 69%, 0.2);
+}
+
+body{
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container{
+    width: 650px;
+    margin: auto;
+    margin-top: 180px;
+    border-radius: 15px;
+    display: flex;
+    background: #fff;
+    position: relative;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.055);
+}
+
+.foto{
+    width: 300px;
+    background-image: url(images/drawers.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.deskripsi{
+    padding: 15px 35px;
+    width: 400px;
+    overflow: hidden;
+    color: hsl(217, 19%, 35%);
+}
+
+.deskripsi h1{
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.deskripsi p{
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 600px;
+    line-height: 17px;
+}
+
+.deskripsi .inner{
+    display: flex;
+}
+
+.deskripsi .inner img{
+    border-radius: 100%;
+    width: 12%;
+    height: 12%;
+    float: left;
+}
+
+.deskripsi .inner .desc{
+    width: 610px;
+    height: 50px;
+}
+
+.deskripsi .inner .desc h1{
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    float: left;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 2px;
+    display: block;
+}
+
+.deskripsi .inner .desc h2{
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    margin-left: 20px;
+    font-weight: 400;
+    float: left;
+    padding: 10px 0;
+    position: absolute;
+}
+
+.share{
+    width: 30px;
+    height: 30px;
+    background-color: hsl(210, 46%, 95%);
+    fill: black;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+.share:hover{
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 100%;
+    fill: white;
+    cursor: pointer;
+}
+
+.deskripsi .inner .share svg{
+    padding: 8px 32px 18px 8px;
+}
+
+.active_share{
+    color:hsl(214, 17%, 51%);
+    position: absolute;
+    display: flex;
+    width:200px;
+    right: -80px;
+    bottom: 70px;
+    align-items: center;
+    border-radius: 10px;
+    padding:15px 30px;
+    background-color: hsl(217, 19%, 35%);
+    -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.25);
+}
+
+.active_share img{
+    margin: 0 8px;
+}
+
+.active_share span{
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 5px;
+    padding: 0 5px;
+}
+
+.active_share.arrow-bottom::after {
+    content: " ";
+    position: absolute;
+    left:calc(50% - 14.4px);
+    bottom: -12px;
+    border-top: 15px solid  hsl(217, 19%, 35%);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: none;
+}
+
+@media(max-width:700px){
+    .container{
+        flex-direction: column;
+        width: 90%;
+        top: -80px;
+    }
+    .foto{
+        display: flex;
+        width: 100%;
+        height: 250px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    .deskripsi{
+        width: 90%;
+        padding: 20px;
+    }
+    .deskripsi .inner img{
+        width: 40px;
+        height: 40px;
+    }
+    .deskripsi .inner .active_share img{
+        width: 25px;
+        height: 25px;
+        padding: 8px 0 8px 0;
+    }
+    .active_share.arrow-bottom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--vdg-blue);
+        width: -webkit-fill-available;
+        box-sizing: content-box;
+        box-shadow: 15px 30px 30px -10px var(--go-blue);
+    }
+    .active_share.arrow-bottom::after{
+        content: "";
+        position: absolute;
+        left:calc(91% - 14px);
+        bottom: 23px;
+        width: 0;
+        height: 10px;
+        border-radius: 100%;
+        border-top: solid 10px var(--vdg-blue);
+        border-left: solid 15px var(--vdg-blue);
+        border-right: solid 15px var(--vdg-blue);
+        box-shadow: 15px 30px 30px -10px var(--go-blue);
+    }
+}
+
