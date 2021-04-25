@@ -10,21 +10,24 @@
 body{
     font-size: 13px;
     background-color: hsl(210, 46%, 95%);
+    margin: 0 auto;
 }
 
 .container{
-    width: 650px;
+    width: 750px;
+    height: 270px;
     margin: auto;
     margin-top: 180px;
     border-radius: 15px;
     display: flex;
     background: #fff;
     position: relative;
+    top: 130px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.055);
 }
 
 .foto{
-    width: 300px;
+    width: 500px;
     background-image: url(images/drawers.jpg);
     background-position: center;
     background-size: cover;
@@ -34,15 +37,15 @@ body{
 
 .deskripsi{
     padding: 15px 35px;
-    width: 400px;
+    width: 600px;
     overflow: hidden;
     color: hsl(217, 19%, 35%);
 }
 
 .deskripsi h1{
     font-family: 'Manrope', sans-serif;
-    font-size: 19px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .deskripsi p{
@@ -50,6 +53,7 @@ body{
     font-size: 12px;
     font-weight: 600px;
     line-height: 17px;
+    margin-bottom: 20px;
 }
 
 .deskripsi .inner{
